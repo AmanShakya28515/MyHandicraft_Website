@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+        {% for user in users %}
+        <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+            <td>
+                <a href="{% url 'update_user' user.id %}">Edit</a>
+                <a href="{% url 'user_delete' user.id %}">Delete</a>
+<!-- user.id chai hmro user_id parameter mah pass hunxa hai tha in the function                -->
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+<!-- user.id serves as a way to pass the specific user's unique identifier (ID) to the view that handles the update action. -->

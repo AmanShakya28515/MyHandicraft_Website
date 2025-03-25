@@ -1,0 +1,28 @@
+{% block content %}
+<h1>Product List</h1>
+<a href="{% url 'Utencils_add_product' %}" class="btn btn-primary mb-3">Add New Product</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.image }}</td>
+            <td>
+                <a href="{% url 'Utencils_update_product' product.pk %}" class="btn btn-warning">Edit</a>
+                <a href="{% url 'Utencils_delete_product' product.pk %}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    
+        {% endfor %}
+    </tbody>
+    
+</table>
+{% endblock %}

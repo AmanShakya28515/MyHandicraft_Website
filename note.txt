@@ -1,0 +1,7 @@
+CRUD for Products & Users (Admin)
+Admin Dashboard UI
+User Dashboard UI
+Product Listing & Search
+Cart & Checkout Flow
+Order History & Notifications (User)
+

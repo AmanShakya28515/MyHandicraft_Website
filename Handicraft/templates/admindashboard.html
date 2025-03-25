@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .sidebar {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            background-color: #343a40;
+            padding-top: 20px;
+        }
+        .sidebar a {
+            color: white;
+        }
+        .sidebar a:hover {
+            background-color: #495057;
+            text-decoration: none;
+        }
+        .main-content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2 class="text-light text-center">Admin Dashboard</h2>
+        <a href="{% url 'create_user' %}" class="list-group-item list-group-item-action text-light">Add User</a>
+        <a href="{% url 'user_list' %}" class="list-group-item list-group-item-action text-light">User List</a>
+
+
+        <a href="{% url 'ProductCategory' %}" class="list-group-item list-group-item-action text-light">Add Category Product</a>
+        <a href="{% url 'Buddha_add_product' %}" class="list-group-item list-group-item-action text-light">Add Buddha Product</a>
+        <a href="{% url 'Tara_add_product' %}" class="list-group-item list-group-item-action text-light">Add Tara Product</a>
+        <a href="{% url 'Ganesh_add_product' %}" class="list-group-item list-group-item-action text-light">Add Ganesh Product</a>
+        <a href="{% url 'Sarsoti_Laxmi_add_product' %}" class="list-group-item list-group-item-action text-light">Add Sarsoti_Laxmi Product</a>
+        <a href="{% url 'Utencils_add_product' %}" class="list-group-item list-group-item-action text-light">Add Utensils Product</a>
+
+
+        <a href="{% url 'Buddha_product_list' %}" class="list-group-item list-group-item-action text-light">Manage Buddha Products</a>
+        <a href="{% url 'Tara_product_list' %}" class="list-group-item list-group-item-action text-light">Manage Tara Products</a>
+        <a href="{% url 'Ganesh_product_list' %}" class="list-group-item list-group-item-action text-light">Manage Ganesh Products</a>
+        <a href="{% url 'Sarsoti_Laxmi_product_list' %}" class="list-group-item list-group-item-action text-light">Manage Sarsoti_Laxmi Products</a>
+        <a href="{% url 'Utencils_product_list' %}" class="list-group-item list-group-item-action text-light">Manage Utencils Products</a>
+
+        <a href="{% url 'CategoryList' %}" class="list-group-item list-group-item-action text-light">Manage Category</a>
+
+        <a href="#reports" class="list-group-item list-group-item-action text-light">Reports</a>
+        <a href="#settings" class="list-group-item list-group-item-action text-light">Settings</a>
+        <a href="{% url 'logout' %}" class="list-group-item list-group-item-action text-light">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="mb-4">Welcome to the Admin Dashboard</h1>
+
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-white bg-primary mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Users</h5>
+                        <p class="card-text">100</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-success mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Products</h5>
+                        <p class="card-text">50</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-warning mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Orders</h5>
+                        <p class="card-text">75</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-white bg-danger mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Total Revenue</h5>
+                        <p class="card-text">$1000</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h2 id="users" class="mt-5">User Management</h2>
+        <p>Manage users, view user activity, and edit user details.</p>
+        <button class="btn btn-primary">Add New User</button>
+
+        <h2 id="products" class="mt-5">Product Management</h2>
+        <p>Manage products, update stock levels, and view product details.</p>
+        <button class="btn btn-primary">Add New Product</button>
+
+        <h2 id="orders" class="mt-5">Order Management</h2>
+        <p>View and manage customer orders.</p>
+        <button class="btn btn-primary">View All Orders</button>
+
+        <h2 id="reports" class="mt-5">Reports</h2>
+        <p>Generate sales and user reports.</p>
+        <button class="btn btn-primary">View Reports</button>
+
+        <h2 id="settings" class="mt-5">Settings</h2>
+        <p>Configure website settings and manage user roles.</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

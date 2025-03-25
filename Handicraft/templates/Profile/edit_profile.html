@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg">
+          <!-- Blue strip at the top -->
+          <div class="card-header bg-primary text-white">
+            <h4>Edit Profile</h4>
+          </div>
+          <div class="card-body">
+            <form method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+              <div class="form-group">
+                {{ form.as_p }}  <!-- Render the form fields -->
+              </div>
+              <!-- Save Changes button with custom Bootstrap styling -->
+              <button type="submit" class="btn btn-primary btn-lg w-100 mt-3">Save Changes</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

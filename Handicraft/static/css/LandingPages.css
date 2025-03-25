@@ -1,0 +1,28 @@
+.category-card {
+    text-align: center;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 0 10px;
+  }
+  .category-card img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .product-card img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  .badge-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #28a745;
+    color: white;
+    padding: 5px;
+    font-size: 12px;
+  }
+  .carousel-inner img {
+    width: 100%;       /* Adjust width as needed */
+    height: 400px;    /* Set a specific height */
+    object-fit: cover; /* Ensures the image covers the entire area */
+}
