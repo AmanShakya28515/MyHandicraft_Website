@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-# MyHandicraft_Website
-=======
+
 # Handicraft E-Commerce Website
 
 A fully functional e-commerce website designed for selling handcrafted products. The website includes features like CRUD operations for products, user authentication, and order management. It uses MySQL for database management, Django for the backend, and HTML, CSS, and Bootstrap for the front end. GitHub and Git are used for version control.
@@ -39,4 +37,3 @@ A fully functional e-commerce website designed for selling handcrafted products.
 - **Authentication**: Django's built-in user authentication system
 
 
->>>>>>> origin/master
