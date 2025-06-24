@@ -24,10 +24,6 @@ def Register(request):
 
     return render(request,'registration.html',{'form':form})
 
-        
-
-    
-
 def LandingPage(request):
     Buddha_products = Product_Buddha.objects.all()
     tara_products = Product_Tara .objects.all()
